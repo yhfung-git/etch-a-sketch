@@ -1,8 +1,7 @@
 :root {
-  --text: #E8D2A6;
-  --color: #F48484;
+  --body: #E8D2A6;
   --background: #F55050;
-  --body: #86A3B8;
+  --text: #86A3B8;
 }
 
 body {
@@ -16,28 +15,50 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--body);
 }
 
 /* Navbar */
 nav {
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--text);
+  color: var(--body);
   font-weight: bold;
   font-size: 30px;
   text-align: center;
   letter-spacing: .2rem;
-  padding: 20px 0;
-  position: fixed;
+  padding: 15px 0;
+  position: sticky;
   width: 100vw;
 }
 /* Container */
 .container {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
 }
+
+.outside {
+  background: var(--background);
+  width: 450px;
+  height: 450px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside {
+  background: white;
+  height: 400px;
+  width: 400px;
+  border-radius: 8px;
+  cursor: url("https://cur.cursors-4u.net/user/use-1/use109.cur"), auto;
+}
+
 /* Footer */
 footer {
-  background: var(--background);
+  background: var(--text);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -48,5 +69,6 @@ footer {
 }
 
 footer p {
-  color: var(--text);
+  color: var(--body);
+  font-weight: bold;
 }
