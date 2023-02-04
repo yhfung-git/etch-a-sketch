@@ -17,17 +17,35 @@
   <body>
     <!-- Navbar -->
     <nav>Etch-a-Sketch</nav>
-
     <div class="container">
-      <div class="outside">
-        <div class="inside"></div>
-      </div>
-    </div>
 
+      <!-- Buttons -->
+      <div class="buttons-container">
+        <div class="buttons">
+          <button>Classic</button>
+          <button>Colorful</button>
+          <button>Choose</button>
+          <button>Reset</button>
+      </div>
+        <div class="size-button">
+          <input type="text" placeholder="Size" value="16x16">
+          <button>Set</button>
+        </div>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid-container">
+        <div class="outside">
+          <div class="inside" id="grid"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Footer -->
     <footer>
       <p>Copyright ©2022-<span id="current-year"></span> <a href="https://github.com/yhfung-git" target="_blank">yhfung-git<i class="fa-brands fa-github"></i></a>. All Rights Reserved.</p>
     </footer>
     <!-- JavaScript -->
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
