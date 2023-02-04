@@ -22,14 +22,16 @@
       <!-- Buttons -->
       <div class="buttons-container">
         <div class="buttons">
-          <button>Classic</button>
-          <button>Colorful</button>
-          <button>Choose</button>
-          <button>Reset</button>
-      </div>
+          <button class="default" onclick="changeColor('#F55050')">Default</button>
+          <button class="random" onclick="changeColor('random')">Random</button>
+          <input type="color" value="#F55050">
+          <button class="eraser" onclick="changeColor('white')">Eraser</button>
+          <button class="grid">Grid</button>
+          <button class="reset" onclick="resetGrid()">Reset</button>
+        </div>
         <div class="size-button">
-          <input type="text" placeholder="Size" value="16x16">
-          <button>Set</button>
+          <input type="text" placeholder="Size" value="12" onchange="changeSize(this.value)">
+          <button class="set">Set</button>
         </div>
       </div>
 
@@ -43,9 +45,9 @@
     </div>
     <!-- Footer -->
     <footer>
-      <p>Copyright ©2022-<span id="current-year"></span> <a href="https://github.com/yhfung-git" target="_blank">yhfung-git<i class="fa-brands fa-github"></i></a>. All Rights Reserved.</p>
+      <p>Copyright ©2023-<span id="current-year"></span> <a href="https://github.com/yhfung-git" target="_blank">yhfung-git<i class="fa-brands fa-github"></i></a>. All Rights Reserved.</p>
     </footer>
     <!-- JavaScript -->
-    <script src="main.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
