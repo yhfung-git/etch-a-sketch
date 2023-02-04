@@ -56,11 +56,10 @@ nav {
 }
 
 .inside {
-  background: white;
   height: 400px;
   width: 400px;
-  border-radius: 8px;
   cursor: url("https://cur.cursors-4u.net/user/use-1/use109.cur"), auto;
+  display: grid;
 }
 
 /* Buttons */
@@ -68,24 +67,28 @@ nav {
   margin: 50px 0;
 }
 
-input {
+.size-button input {
   background: white;
   border: 2px solid var(--background);
-  height: 25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
 }
 
-input, textarea {
+.size-button input, textarea {
   color: var(--background);
+  text-align: center;
 }
 
-input:focus {
+.size-button input:focus {
   outline: 1px solid var(--background);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: bold;
 }
 
 .buttons{
  display: grid;
- grid-template-columns: 1fr 1fr;
+ grid-template-columns: 1fr 1fr 1fr;
  margin-bottom: 30px;
  grid-auto-rows: 100px;
  grid-gap: 20px;
@@ -95,9 +98,9 @@ input:focus {
 
 .size-button {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .buttons > button,
@@ -114,14 +117,67 @@ input:focus {
   align-items: center;
   font-size: 15px;
 }
-
 .buttons > button:hover,
 .size-button > button:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
   transform: scale(1.1);
-  background-color: var(--background);
-  color: white;
   font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Default Button */
+.default:hover {
+  background-color: var(--background);
+  border: 2px solid var(--background);
+  color: white;
+}
+
+/* Random Button */
+.random:hover {
+  background: linear-gradient(20deg, #B5F1CC,#FCC2FC,#FFFBAC);
+  border: none;
+  color: white;
+}
+
+/* Eraser Button */
+.eraser:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: var(--background);
+}
+
+/* Input Color */
+input[type='color'] {
+  /* -webkit-appearance: none; */
+  width: 82px;
+  height: 82px;
+  border: none;
+  background-color: transparent;
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 100%;
+}
+
+input[type='color']:hover {
+  transform: scale(1.1);
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+}
+
+/* Set, Grid, Reset and Color buttons */
+.set:hover,
+.grid:hover,
+.reset:hover,
+.color:hover {
+  background-color: var(--text);
+  border: 2px solid var(--text);
+  color: white;
 }
 
 /* Footer */
