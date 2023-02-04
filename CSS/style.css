@@ -30,8 +30,14 @@ nav {
   position: sticky;
   width: 100vw;
 }
-/* Container */
+
 .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Grid */
+.grid-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,6 +60,67 @@ nav {
   width: 400px;
   border-radius: 8px;
   cursor: url("https://cur.cursors-4u.net/user/use-1/use109.cur"), auto;
+}
+
+/* Buttons */
+.buttons-container {
+  margin: 50px 0;
+}
+
+input {
+  background: white;
+  border: 2px solid var(--background);
+  height: 25px;
+}
+
+input, textarea {
+  color: var(--background);
+}
+
+input:focus {
+  outline: 1px solid var(--background);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.buttons{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ margin-bottom: 30px;
+ grid-auto-rows: 100px;
+ grid-gap: 20px;
+ justify-items: center;
+ align-items: center;
+}
+
+.size-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.buttons > button,
+.size-button > button {
+  background: white;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  border: 2px solid var(--background);
+  color: var(--background);
+  transition: .3s all ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.buttons > button:hover,
+.size-button > button:hover {
+  transform: scale(1.1);
+  background-color: var(--background);
+  color: white;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* Footer */
