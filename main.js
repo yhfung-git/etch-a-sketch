@@ -5,25 +5,23 @@ document.getElementById("current-year").innerHTML = year;
 
 
 // Etch-a-Sketch
-// Select Size (min 2 & max 80)
+// Select Size (min 2 & max 64)
+let sizeValue = document.getElementById("sizeValue");
+// Change size value (text)
 function changeSize(value) {
-  if (value >= 2 && value <= 80) {
-    generateGrid(value);
-  } else if (value < 2) {
-    alert("Minimum 2!");
-  } else {
-    alert("Maximum 60!");
-  };
+  sizeValue.innerText = (`${value} x ${value}`);
+}
+// Update grid
+function updateGrid(value) {
+  generateGrid(value);
 }
 
 // Set color
-// Click to stop or start painting
-let click = false;
+let click = true;
 const inside = document.querySelector(".inside");
-// inside.onmousedown = () => (mouseDown = true);
-// inside.onmouseup = () => (mouseDown = false)
+
+// Click to stop or start painting
 inside.addEventListener("click", () => {
-  // after clicked, it won't paint anymore (click = false);
   click = !click;
 });
 
@@ -55,6 +53,20 @@ function resetGrid() {
   });
 }
 
+// Show or Hide Grid Border
+function showBorder() {
+  let grid = document.getElementById("grid");
+  let divs = grid.querySelectorAll("div");
+
+  divs.forEach(div => {
+    if (div.style.border === "white") {
+      div.style.border = "1px solid #F55050";
+    } else {
+      div.style.border = "white";
+    }
+  });
+}
+
 // Generate Grid
 function generateGrid(size) {
   let grid = document.getElementById("grid");
@@ -79,4 +91,4 @@ function generateGrid(size) {
   }
 }
 
-generateGrid(12);
+generateGrid(16);
