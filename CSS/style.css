@@ -284,6 +284,10 @@ footer p {
     max-height: 67vw;
   }
 
+  .tooltip .tooltip-text {
+    width: 136px;
+  }
+
   footer p {
     text-align: center;
     font-size: 12px;
