@@ -145,13 +145,13 @@ input[type='color']:hover {
 
 /* Grid Button */
 .grid {
-  background-image: url("/images/grid.png") !important;
+  background-image: url("https://yhfung-git.github.io/etch-a-sketch/images/grid.png") !important;
   background-size: contain !important;
   background-position: center !important;
 }
 
 .grid:hover {
-  background-image: url("/images/grid.png");
+  background-image: url("https://yhfung-git.github.io/etch-a-sketch/images/grid.png");
   background-size: contain;
   background-position: center;
 }
