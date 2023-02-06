@@ -145,13 +145,13 @@ input[type='color']:hover {
 
 /* Grid Button */
 .grid {
-  background-image: url("/Image/grid.png") !important;
+  background-image: url("Image/grid.png") !important;
   background-size: contain !important;
   background-position: center !important;
 }
 
 .grid:hover {
-  background-image: url("/Image/grid.png");
+  background-image: url("Image/grid.png");
   background-size: contain;
   background-position: center;
 }
