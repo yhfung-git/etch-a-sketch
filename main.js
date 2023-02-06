@@ -5,15 +5,23 @@ document.getElementById("current-year").innerHTML = year;
 
 
 // Etch-a-Sketch
-// Select Size (min 2 & max 64)
+// Select Size (min 10 & max 70)
 let sizeValue = document.getElementById("sizeValue");
 // Change size value (text)
 function changeSize(value) {
   sizeValue.innerText = (`${value} x ${value}`);
+  rangeSliderValue(value);
 }
 // Update grid
 function updateGrid(value) {
   generateGrid(value);
+}
+
+let progressBar = document.getElementById('progressBar');
+
+function rangeSliderValue(value) {
+  // (value / maximum value of the range) * width of the range + %
+  progressBar.style.width = (value / 70) * 52 + '%';
 }
 
 // Set color
