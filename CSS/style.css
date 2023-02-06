@@ -209,7 +209,7 @@ input[type=range]::-webkit-slider-thumb:hover  {
   background-color: var(--background);
   border-radius: 7px;
   position: absolute;
-  left: 39px;
+  left: 39.42857px;;
 }
 
 /* Footer */
