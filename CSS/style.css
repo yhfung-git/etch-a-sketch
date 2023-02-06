@@ -212,6 +212,40 @@ input[type=range]::-webkit-slider-thumb:hover  {
   left: 39.42857px;;
 }
 
+/* Tooltip */
+.tooltip {
+  color: var(--background);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  position: relative;
+  font-weight: bold;
+  margin: 30px auto;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 175px;
+  background-color: var(--background);
+  color: #fff;
+  border-radius: 4px;
+  margin: 10px auto;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  left: 14px;
+  top: 0px;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
 /* Footer */
 footer {
   background: var(--text);

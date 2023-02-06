@@ -29,10 +29,16 @@
           <button class="grid" onclick="showBorder()" id="gridBorder">Grid</button>
           <button class="reset" onclick="resetGrid()">Reset</button>
         </div>
+        <!-- Range for grid size -->
         <div class="size-button">
           <input type="range" value="10" min="10" max="70" onmousemove="changeSize(this.value)" onmouseup="updateGrid(this.value)" ontouchmove="changeSize(value)" ontouchend="updateGrid(value)">
           <div id="progressBar"></div>
           <div id="sizeValue" class="size-value">10 x 10</div>
+        </div>
+        <!-- Tooltip -->
+        <div class="tooltip">
+          ?
+          <span class="tooltip-text">click in the drawing area to start or stop drawing</span>
         </div>
       </div>
 
