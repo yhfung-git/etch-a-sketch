@@ -17,10 +17,10 @@ function updateGrid(value) {
   generateGrid(value);
 }
 
-let progressBar = document.getElementById('progressBar');
-
+// Progress bar
+let progressBar = document.getElementById("progressBar");
+// (value / maximum value of the range) * width of the range + %
 function rangeSliderValue(value) {
-  // (value / maximum value of the range) * width of the range + %
   progressBar.style.width = (value / 70) * 52 + '%';
 }
 
