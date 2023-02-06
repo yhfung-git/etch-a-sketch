@@ -5,9 +5,9 @@ document.getElementById("current-year").innerHTML = year;
 
 
 // Etch-a-Sketch
-// Select Size (min 10 & max 70)
+// Change Size (min 10 & max 70)
 let sizeValue = document.getElementById("sizeValue");
-// Change size value (text)
+
 function changeSize(value) {
   sizeValue.innerText = (`${value} x ${value}`);
   rangeSliderValue(value);
