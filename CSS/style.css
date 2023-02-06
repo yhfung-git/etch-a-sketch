@@ -246,9 +246,7 @@ input[type=range]::-webkit-slider-thumb:hover  {
 }
 
 .grid-active {
-  background-size: contain !important;
-  background-position: center !important;
-  background-image: url("/Image/grid.png") !important;
+  background: white !important;
   color: var(--background) !important;
   font-weight: bold;
   transform: scale(1.1);
