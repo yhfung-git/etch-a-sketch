@@ -75,12 +75,6 @@ nav {
  align-items: center;
 }
 
-.size-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* All Buttons */
 .buttons > button,
 .size-button > button {
@@ -166,17 +160,17 @@ input[type='color']:hover {
 /* Input range for grid's divs */
 input[type="range"] {
   appearance: none;
-  width: 150px;
-  height: 7px;
+  outline: none;
+  width: 52%;
+  height: 8px;
   background: white;
   border-radius: 5px;
-  background-image: linear-gradient(var(--background), var(--background));
 }
 
 input[type="range"]::-webkit-slider-thumb {
   appearance: none;
-  height: 18px;
-  width: 18px;
+  height: 21px;
+  width: 21px;
   border-radius: 50%;
   background: var(--background);
   cursor: ew-resize;
@@ -188,12 +182,30 @@ input[type=range]::-webkit-slider-runnable-track  {
   box-shadow: none;
   border: none;
   background: transparent;
+  z-index: 1;
+}
+
+/* Size Buttons */
+.size-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .size-value {
   color: var(--background);
   font-weight: bolder;
   margin-left: 10px;
+}
+
+#progressBar {
+  width: 7%;
+  height: 8px;
+  background-color: var(--background);
+  border-radius: 7px;
+  position: absolute;
+  left: 39.5px;
 }
 
 /* Footer */
@@ -213,6 +225,8 @@ footer p {
   font-weight: bold;
 }
 
+
+/* Responsive Design */
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
