@@ -76,60 +76,44 @@ function changeColor(choice) {
   color = choice;
 }
 
-
-function activeButton() {
-    if (color === "random") {
-      this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    } else {
-      this.style.backgroundColor = color;
-    };
-}
-
 // Activate or Deactivate buttons
 const buttons = document.querySelectorAll(".buttons button");
-const defaul = document.querySelector(".default");
-const random = document.querySelector(".random");
-const eraser = document.querySelector(".eraser");
-const grid = document.querySelector(".grid");
-const colors = document.getElementById("color-input");
+const defaulBtn = document.querySelector(".default");
+const randomBtn = document.querySelector(".random");
+const eraserBtn = document.querySelector(".eraser");
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
     if (button.classList.value === "random") {
-      random.classList.add("random-active");
-      defaul.classList.remove("default-active");
-      eraser.classList.remove("eraser-active");
-      grid.classList.remove("grid-active");
+      randomBtn.classList.add("random-active");
+      defaulBtn.classList.remove("default-active");
+      eraserBtn.classList.remove("eraser-active");
     } else if (button.classList.value === "default") {
-      defaul.classList.add("default-active");
-      eraser.classList.remove("eraser-active");
-      random.classList.remove("random-active");
-      grid.classList.remove("grid-active");
+      defaulBtn.classList.add("default-active");
+      eraserBtn.classList.remove("eraser-active");
+      randomBtn.classList.remove("random-active");
     } else if (button.classList.value === "eraser") {
-      eraser.classList.add("eraser-active");
-      defaul.classList.remove("default-active");
-      random.classList.remove("random-active");
-      grid.classList.remove("grid-active");
-    } else if (button.classList.value === "grid") {
-      grid.classList.add("grid-active");
-      eraser.classList.remove("eraser-active");
-      defaul.classList.remove("default-active");
-      random.classList.remove("random-active");
-    } else {
-      defaul.classList.remove("default-active");
-      random.classList.remove("random-active");
-      eraser.classList.remove("eraser-active");
-      grid.classList.remove("grid-active");
+      eraserBtn.classList.add("eraser-active");
+      defaulBtn.classList.remove("default-active");
+      randomBtn.classList.remove("random-active");
     }
-  })
+  });
 });
 
-// Click on the color button will remove all the active from other buttons
-colors.addEventListener("click", () => {
-  defaul.classList.remove("default-active");
-  random.classList.remove("random-active");
-  eraser.classList.remove("eraser-active");
-  grid.classList.remove("grid-active");
+// Grid Button Toggle
+const gridBtn = document.querySelector(".grid");
+
+gridBtn.addEventListener("click", () => {
+  gridBtn.classList.toggle("grid-active");
+});
+
+// Click on the color button (input) will deactive other buttons except Grid button
+const colorsBtn = document.getElementById("color-input");
+
+colorsBtn.addEventListener("click", () => {
+  defaulBtn.classList.remove("default-active");
+  randomBtn.classList.remove("random-active");
+  eraserBtn.classList.remove("eraser-active");
 });
 
 // Generate Grid
@@ -141,6 +125,9 @@ function generateGrid(size) {
   divs.forEach(div =>{
     grid.removeChild(div);
   });
+
+  // Initialise the activate of the grid button
+  gridBtn.classList.remove("grid-active");
 
   // Set columns and row depends on the size
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
