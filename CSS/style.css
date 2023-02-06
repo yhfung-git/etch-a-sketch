@@ -205,7 +205,7 @@ input[type=range]::-webkit-slider-runnable-track  {
   background-color: var(--background);
   border-radius: 7px;
   position: absolute;
-  left: 39.5px;
+  left: 39px;
 }
 
 /* Footer */
