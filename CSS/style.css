@@ -283,6 +283,10 @@ input[type=range]::-webkit-slider-thumb:hover  {
   top: 0px;
 }
 
+.tooltip:hover {
+  cursor: help;
+}
+
 .tooltip:hover .tooltip-text {
   visibility: visible;
 }
