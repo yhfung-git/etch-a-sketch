@@ -171,6 +171,7 @@ input[type="range"] {
   height: 8px;
   background: white;
   border-radius: 5px;
+  margin: 0;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -210,12 +211,12 @@ input[type=range]::-webkit-slider-thumb:hover  {
 }
 
 #progressBar {
-  width: 7%;
+  width: 7.42857%;
   height: 8px;
   background-color: var(--background);
   border-radius: 7px;
   position: absolute;
-  left: 39.42857px;;
+  left: 39.42857px;
 }
 
 /* Activate buttons  */
