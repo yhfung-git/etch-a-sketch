@@ -99,4 +99,4 @@ function generateGrid(size) {
   }
 }
 
-generateGrid(16);
+generateGrid(10);
